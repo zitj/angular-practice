@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular2021crud": {
+      "hosting": {
+        "angular-crud-firebase": [
+          "angular2021crud"
+        ]
+      }
+    }
+  }
+}
