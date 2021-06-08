@@ -13,9 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFirestoreModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireDatabaseModule,
+    // AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
   ],

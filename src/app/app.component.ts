@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+// import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { UsersService } from './services/users.service';
 
 @Component({
@@ -19,21 +19,20 @@ import { UsersService } from './services/users.service';
 })
 export class AppComponent implements OnInit {
   title = 'angular-crud-firebase';
-  public podaci: User[];
+  // public podaci: User[];
 
   constructor(
-    private afDb: AngularFireDatabase,
+    // private afDb: AngularFireDatabase,
     private formBuilder: FormBuilder,
     public usersService: UsersService
   ) {
-    this.podaci = [];
-
-    const itemsRef: AngularFireList<any> = afDb.list('Podaci');
-    itemsRef.valueChanges().subscribe((x) => {
-      this.podaci = x;
-      console.log(this.podaci);
-    });
-    console.log(afDb);
+    // this.podaci = [];
+    // const itemsRef: AngularFireList<any> = afDb.list('Podaci');
+    // itemsRef.valueChanges().subscribe((x) => {
+    //   this.podaci = x;
+    //   console.log(this.podaci);
+    // });
+    // console.log(afDb);
   }
   formGroup: FormGroup = new FormGroup({});
 
