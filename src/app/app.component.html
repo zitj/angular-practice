@@ -12,9 +12,9 @@
     <button>Submit</button>
   </form>
   <ul>
-    <li *ngFor="let item of usersService.users">
-      {{ item.ime }}
-      {{ item.prezime }}
+    <li *ngFor="let user of usersService.users">
+      {{ user.ime }}
+      {{ user.prezime }}
     </li>
   </ul>
 </div>

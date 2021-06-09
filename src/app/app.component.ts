@@ -36,17 +36,21 @@ export class AppComponent implements OnInit {
   }
   formGroup: FormGroup = new FormGroup({});
 
-  ngOnInit(): void {
-    console.log('gde ste drugari?');
+  clearForm = (): void => {
     this.formGroup = this.formBuilder.group({
       ime: ['', [Validators.required]],
       prezime: ['', [Validators.required]],
     });
+  };
+
+  ngOnInit(): void {
+    this.clearForm();
   }
   onSubmit(): void {
     console.log(this.formGroup.value);
     this.usersService.postUser(this.formGroup.value);
     this.usersService.users.push(this.formGroup.value);
     console.log(this.usersService.users);
+    this.clearForm();
   }
 }
